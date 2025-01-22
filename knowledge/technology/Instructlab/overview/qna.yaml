@@ -1,31 +1,222 @@
 created_by: yogendrasri
 version: 3
-task_description: my first InstructLab skill implementation
+domain: InstructLab
+document_outline: |-
+  Overview of InstructLab,explaining what is InstructLab,How does it work,
+   and What is InstructLab Core.
 seed_examples:
-  - question: What is InstructLab
-    answer: >
-      InstructLab 🐶 uses a novel synthetic data-based alignment tuning method
-      for Large Language Models (LLMs.). The "lab" in InstructLab 🐶 stands for
-      Large-Scale Alignment for chatbots.
-  - question: What is InstructLab Core?
-    answer: >
-      instructlab is the Core package for the InstructLab project that contains
-      the ilab Command-Line Interface (CLI) tool and allows you to perform the
-      following actions:
+  - context: >-
+      InstructLab (Large-scale Alignment for chatBots) is an open source
+      initiative that provides a platform for easy engagement with AI Large
+      Language Models (LLM) by using the ilab command-line interface (CLI) tool.
+      You can use the CLI to work with Granite-7b to test new skills and
+      knowledge, for example, asking it to write a meeting notes summary or
+      answer a question about a particular subject. Users can then augment the
+      LLM’s capabilities by submitting the skills and knowledge they have tested
+      to the project’s taxonomy repository on GitHub by creating a pull request.
+      This approach encourages community-driven enhancements without the need
+      for complex model forking or fine-tuning of the model, promoting rapid
+      development through collaborative contributions.
+    questions_and_answers:
+      - question: What is LAB?
+        answer: >-
+          LAB (Large-scale Alignment for chatBots) is a novel synthetic
+          data-based align tuning method for LLMs from IBM Research. It consists
+          of three components:
 
-          Download a pre-trained Large Language Model (LLM).
-          Chat with the LLM.
-  - question: what is InstructLab User Interface (UI)?
-    answer: >-
-      The InstructLab User Interface (UI) is an additional component in the
-      InstructLab project to make Knowledge/Skills contributions more accessible
-      to the general user.
-  - question: How does InstructLab work?
-    answer: >-
-      InstructLab is driven by taxonomies and works by empowering users to add
-      new skills and knowledge to a pre-trained LLM.
-  - question: How can I contribute?
-    answer: >-
-      You can begin your contribution journey by reading over the Contributing
-      guide and joining the Community Discord Server or the Community Slack
-      Channel.
+
+          A taxonomy-drive data curation process
+
+          A large-scale synthetic data generator
+
+          Multi-phased-training with replay buffers
+      - question: How does InstructLab work
+        answer: >-
+          InstructLab is driven by taxonomies and works by empowering users to
+          add new skills and knowledge to a pre-trained LLM.
+      - question: What are the goals of the InstructLab project
+        answer: >-
+          The goal on the InstructLab project is to democratize contributions to
+          AI and LLMs. There are two approaches to achieving this goal in our
+          community:
+
+
+          Enabling collaborative contribution to a large language model (LLM)
+          through the project's taxonomy repository. When users contribute to
+          this repository, the project resynthesizes its open source training
+          data. Our community Granite-based model is then retrained, ensuring
+          that community contributions are integrated while enriching the
+          model’s capabilities over time.
+
+
+          Providing open source tooling to enable the InstructLab methodology
+          and enabling community contributions to this toolset in accordance
+          with open source project principles. This tooling includes the
+          InstructLab core engine & CLI as well as libraries such as the sdg,
+          training, and evaluation libraries.
+  - context: >-
+      The ability to contribute to a Large Language Model (LLM) has been
+      difficult in no small part because it is difficult to get access to the
+      necessary compute infrastructure. This taxonomy repository will be used as
+      the seed to synthesize the training data for InstructLab-trained models.
+      We intend to retrain the model(s) using the main branch following
+      InstructLab's progressive training on a regular basis. This enables fast
+      iteration of the model(s), for the benefit of the open source community.
+      By contributing your skills and knowledge to this repository, you will see
+      your changes built into an LLM within days of your contribution rather
+      than months or years! If you are working with a model and notice its
+      knowledge or ability lacking, you can correct it by contributing knowledge
+      or skills and check if it's improved after your changes are built. While
+      public contributions are welcome to help drive community progress, you can
+      also fork this repository under the Apache License, Version 2.0, add your
+      own internal skills, and train your own models internally. However, you
+      might need your own access to significant compute infrastructure to
+      perform sufficient retraining.
+    questions_and_answers:
+      - question: How can I contribute
+        answer: >-
+          You can begin your contribution journey by reading over the
+          Contributing guide and joining the Community Discord Server or the
+          Community Slack Channel.
+
+
+          When you're ready to start contributing, you can follow the Getting
+          Started guide. This guide shows you how to
+
+
+          Install the ilab CLI.
+
+          Deploy the LLM locally.
+
+          Add skills or knowledge and train to the local LLM with your data.
+
+          Create a pull request and add your information to the InstructLab
+          taxonomy.
+
+          Get reviews on your pull requests
+      - question: I'm having problems with the ilab CLI tool. What should I do
+        answer: >-
+          A list of common problems associated with downloading the ilab CLI
+          tool can be found in the CLI repository's discussion board.
+      - question: Why should I contribute
+        answer: >-
+          InstructLab is designed to enable collaboration around the InstructLab
+          Granite models, open source licensed LLMs that contributors can access
+          through Hugging Face. Participating is an opportunity to contribute to
+          open source AI regardless of technical background.
+
+
+          When contributors write an addition to the existing taxonomy, make a
+          pull request, and get it reviewed and merged, their changes are rolled
+          out in the next build. This update strategy expedites the model’s
+          capabilities and allows contributors to see the impact that they have
+          made on the model much sooner than other LLMs.
+  - context: >-
+      Contributions to the InstructLab project include fine-tuning Granite-7b,
+      an open-source licensed LLM. Contributors have direct access to the model they are improving through Hugging Face.
+    questions_and_answers:
+      - question: What is Merlinite-7b
+        answer: >-
+          Merlinite-7b is a Mistral-7b derivative model fine-tuned with the LAB
+          (Large-scale Alignment for chatBots) method using
+          Mixtral-8x7b-Instruct as a teacher model.
+      - question: What is Granite-7-lab
+        answer: >-
+          Granite-7b-lab is a model that was built from scratch by IBM and fine
+          tuned with the LAB (Large-scale Alignment for chatBots) method.
+
+
+          More information about the Granite-7b can be found on the Hugging Face
+          project page.
+      - question: What is LLM
+        answer: >-
+          Large language models (LLMs) are machine learning models that can comprehend and generate human language text.
+          They work by analyzing massive data sets of language.
+  - context: >-
+      Skills require a much smaller volume of content than knowledge
+      contributions. An entire skill contribution to the taxonomy tree can be
+      just a few lines of YAML in the qna.yaml file ("qna" is short for
+      "questions and answers") and an attribution.txt file for citing sources.
+
+      While skills are foundational or performative, knowledge is based more on
+      answering questions that involve facts, data, or references.
+
+      Knowledge is supported by documents, such as a textbook, technical manual,
+      encyclopedia, journal, or magazine.
+
+
+      Knowledge in the taxonomy tree consists of a few more elements than
+      skills:
+    questions_and_answers:
+      - question: What is a “skill”
+        answer: >-
+          In the context of InstructLab, a skill is a capability domain
+          submitted by a contributor intending to train the AI model on the
+          submitted information. In other words, when you submit a skill, you
+          teach the AI model how to do something.
+      - question: What is “knowledge”
+        answer: >-
+          Knowledge consists of data and facts. When creating knowledge for an
+          AI model, you are providing it with additional data and information to
+          answer questions more accurately. Whereas skills are the information
+          that trains an AI model on how to do something, knowledge is based on
+          the AI model’s ability to answer questions that involve facts, data,
+          or references.
+      - question: Is the project looking for certain types of skill contributions
+        answer: >-
+          Currently, InstructLab only accepts compositional (freeform and
+          grounded) skills and knowledge. However, any type of freeform or
+          grounded skill can be submitted. Some skills might not be added to the
+          taxonomy repository for reasons such as duplication, submitting a
+          skill that the model already does well, or submitting a controversial
+          skill.
+  - context: >-
+      Help on open source projects is always welcome and there is always
+      something that can be improved. For example, documentation (like the text
+      you are reading now) can always use improvement, code can always be
+      clarified, variables or functions can always be renamed or commented on,
+      and there is always a need for more test coverage. If you see something
+      that you think should be fixed, take ownership! Here is how you get
+      started:
+
+
+      To propose a new feature, it's best to raise an issue in the appropriate
+      repository. This way, features can be discussed with the project
+      maintainers, ensuring that your time is not wasted working on a feature
+      that the project developers will not accept into the codebase.
+    questions_and_answers:
+      - question: What are the acceptance criteria for a skills submission
+        answer: >-
+          Skills should seek to add capabilities or a knowledge domain to the AI
+          model; in other words, a skills submission should teach the AI model
+          how to do something instead of providing information about something.
+          A good skills submission might address something that the AI model
+          does poorly and seek to enhance its ability to execute that capability
+          better. For a list of commonly accepted skills, see Accepted Skills.
+      - question: How are submissions reviewed
+        answer: >-
+          For code review, the project maintainers use LGTM (Looks Good to Me)
+          in comments on the code review to indicate acceptance. A change
+          requires LGTMs from two of the maintainers.
+
+
+          For skills and knowledge PRs, your PR will be checked to ensure it is
+          relevant, actionable, and has all the information necessary for the
+          approval team to review and merge the PR. The Triage team will use
+          labels to manage the state and action of PRs as well as provide
+          feedback to contributors based upon the  review guidelines.
+      - question: What happens after you submit a pull request
+        answer: >-
+          After a pull request is submitted, a review is conducted by both the
+          Taxonomy Triage team and the Taxonomy Approvers team to ensure that
+          they are relevant, actionable, and have all of the required
+          information needed to be a valuable addition to the AI model. Triagers
+          might provide feedback and use labels to manage the state of the
+          submitted pull request. Triagers also might provide informative
+          feedback and helpful comments to improve the submission. After the
+          pull request is approved, a Taxonomy Approver merges the skill.
+document:
+  repo: https://github.com/yogendrasri/instructlab.git
+  commit: dfa3afaf26f40f923cf758389719619ec9b1ddb1
+  patterns:
+    - InstructLab.md

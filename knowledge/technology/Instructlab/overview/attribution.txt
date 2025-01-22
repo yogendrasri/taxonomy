@@ -1,4 +1,6 @@
 Title of work: InstructLab
-    License of the work: https://github.com/yogendrasri/instructlab.git
+    Link to work: https://github.com/yogendrasri/instructlab.git
+    Revision: InstructLab (Large-scale Alignment for chatBots) 
+    License of the work: test
     Creator names: Yogendra
     
